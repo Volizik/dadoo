@@ -1,0 +1,59 @@
+.how-buy {
+  background-color: #f3f3f3;
+  &__text {
+    position: relative;
+    width: 30%;
+    float: left;
+    margin: 30px 0;
+    h2 {
+      font-size: 25px;
+      font-weight: 700;
+      color: #2c3e50;
+      margin: 0;
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2c3e50;
+      margin: 0;
+    }
+    P {
+      color: #979dab;
+      margin: 0;
+    }
+    ol {
+      counter-reset: li; /* Инициализируем счетчик */
+      padding: 0;
+      list-style: none;
+      width: 100%;
+      li {
+        position: relative; /* Создаем контекст для позиционирования элементов */
+        margin: 0 0 0 2em; /* Даем каждому элементу списка отступ слева, что бы освободить пространство для нумерации */
+        padding: 4px 8px;
+        background: transparent;
+      }
+      li:before {
+        content: counter(li)'.'; /* В качестве данных используем счетчик */
+        counter-increment: li; /* Увеличиваем значение счетчика на 1 */
+        position: absolute;
+        top: 0px;
+        left: -45px;
+        width: 2em;
+        border-radius: 50%;
+        font-size: 30px;
+        text-align: center;
+        font-weight: 700;
+        color: #3c9dd0;
+      }
+    }
+  }
+  &__img {
+    width: 70%;
+    position: relative;
+    float: left;
+    transform: translate(20%, 25%);
+    img {
+      max-width: 80%;
+    }
+  }
+}
