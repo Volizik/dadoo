@@ -48,12 +48,8 @@
     }
   }
   &__img {
-    width: 70%;
     position: relative;
     float: left;
     transform: translate(20%, 25%);
-    img {
-      max-width: 80%;
-    }
   }
 }
