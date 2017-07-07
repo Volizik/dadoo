@@ -1,0 +1,12 @@
+.video {
+  padding: 50px 0;
+  &__wrap {
+    position: relative;
+    width: 32%;
+    margin-right: 2%;
+    float: left;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
