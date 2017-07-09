@@ -1,7 +1,7 @@
 .home-stock {
   background-color: #fafafa;
   overflow: hidden;
-  &__head{
+  &__head {
     position: relative;
     float: left;
     width: 100%;
@@ -20,6 +20,9 @@
         list-style: none;
         @include display-flex(flex);
         @include align-items(center);
+        @include breakpoint(max-width 992px) {
+          @include flex-direction(column);
+        }
         padding: 20px;
         max-width: 25%;
         img {
@@ -90,6 +93,10 @@
         span {
           color: #3c9dd0;
           text-transform: uppercase;
+        }
+        .counter {
+          color: #2c3e50;
+          text-transform: lowercase;
         }
       }
       h3 {
