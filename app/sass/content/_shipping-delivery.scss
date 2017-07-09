@@ -1,0 +1,49 @@
+.shipping-delivery{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  &__title{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    h1{
+      color: #2c3e50;
+      font-size: 25px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+  }
+  &__content{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+    &__item{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      h2{
+        color: #ffa438;
+        font-weight: 700;
+        font-size: 20px;
+      }
+      p{
+        color: #adadad;
+        font-size: 15px;
+        font-weight: 400;
+      }
+      ol{
+        li{
+          color: #adadad;
+          font-size: 15px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
