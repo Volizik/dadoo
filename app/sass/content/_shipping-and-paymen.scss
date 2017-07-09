@@ -4,6 +4,13 @@
   float: left;
   width: 100%;
   background: #fafafa;
+  &__absolute{
+    display: block;
+    position: absolute;
+    right: -63px;
+    top: 39px;
+    z-index: 1;
+  }
   &__title{
     color: #2c3e50;
     font-size: 25px;
@@ -11,6 +18,7 @@
     display: block;
     position: relative;
     float: left;
+    margin-top: 0;
     width: 100%;
   }
   &__warning{
@@ -30,6 +38,59 @@
       color: #bfbfbf;
       font-weight: 400;
       font-size: 12px;
+    }
+  }
+  &__delivery{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    h2{
+      color: #ffa438;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    &__text{
+      width: 692px;
+      display: block;
+      position: relative;
+      float: left;
+      p{
+        color: #adadad;
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+    &__table{
+      display: block;
+      position: relative;
+      float: left;
+      width: 645px;
+      margin-bottom: 44px;
+      table>thead>tr{
+        height: 51px;
+        text-align: center;
+        background-color: #e8e8e8;
+        td{
+          width: 212px;
+          color: #2c3e50;
+          font-size: 15px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+      table>tbody>tr{
+        height: 51px;
+        text-align: center;
+        background-color: #f2f2f2;
+        td{
+          width: 212px;
+          color: #2c3e50;
+          font-size: 12px;
+          font-weight: 400;
+
+        }
+      }
     }
   }
 }
