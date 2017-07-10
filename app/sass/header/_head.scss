@@ -5,7 +5,15 @@
   img {
     padding: 10px 10px 10px 0;
   }
+  .container {
+    @include breakpoint(max-width 712px) {
+      padding: 0;
+    }
+  }
   &__top {
+    @include breakpoint(max-width 712px) {
+      display: none;
+    }
     @include display-flex(flex);
     @include flex-direction(row);
     @include justify-content(space-between);
@@ -58,6 +66,9 @@
     }
   }
   &__middle {
+    @include breakpoint(max-width 712px) {
+      @include flex-direction(column-reverse);
+    }
     @include display-flex(flex);
     @include justify-content(space-between);
     @include align-items(center);
@@ -66,7 +77,12 @@
       @include flex-grow(1);
     }
     &__search {
+      @include breakpoint(max-width 712px) {
+        @include order(-1);
+        margin: 0px 5px;
+      }
       @include flex-grow(6);
+
       position: relative;
       z-index: 20;
       input {
@@ -93,24 +109,44 @@
       }
     }
     &__callback {
+      @include breakpoint(max-width 712px) {
+        @include display-flex(flex);
+        @include flex-direction(row);
+        @include order(1);
+        margin-bottom: 10px;
+      }
       @include flex-grow(4);
       text-align: right;
       z-index: 20;
       p {
         font-size: 20px;
         margin: 0;
+        @include breakpoint(max-width 712px) {
+          font-size: 15px;
+          margin-top: 5px;
+        }
       }
       a {
         margin-top: 5px;
+        @include breakpoint(max-width 712px) {
+          padding-top: 15px;
+          margin-left: 10px;
+        }
       }
     }
   }
   &__bottom {
+    @include breakpoint(max-width 712px) {
+      width: 100%;
+    }
     margin-top: 20px;
     position: relative;
     float: left;
     z-index: 20;
     &__nav {
+      @include breakpoint(max-width 712px) {
+        display: none;
+      }
       ul {
         margin: 0px;
         padding: 0px;
@@ -199,7 +235,6 @@
             text-align: center;
             text-decoration: none;
             text-transform: uppercase;
-
           }
         }
         ul {
@@ -207,13 +242,147 @@
           position: absolute;
           top: 50px;
           left: 0;
-          width: 150px;
+          width: 250px;
           background-color: #ffffff;
           z-index: 20;
           li {
-            border-bottom: 1px solid #ccc;
+            width: 100%;
+            position: relative;
+            float: left;
+            clear: both;
+            padding: 5px 10px;
+            box-sizing: border-box;
+            &:hover {
+              background-color: #e4e4e4;
+              cursor: pointer;
+            }
+            &:hover .arrow-menu {
+              display: block;
+            }
+            &:hover >ul{
+              display: block;
+            }
+            img {
+              padding-top: 15px;
+              display: block;
+              position: relative;
+              float: left;
+            }
+            .arrow-menu {
+              display: none;
+              float: right;
+              padding-top: 20px;
+            }
             a {
               display: block;
+              position: relative;
+              float: left;
+            }
+            ul {
+              display: none;
+              position: absolute;
+              left: 249px;
+              top: 0;
+              width: 130px;
+              li {
+                text-align: center;
+                padding: 0px 10px;
+                height: 57px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__nav-mobile {
+      @include breakpoint(max-width 712px) {
+        display: block;
+      }
+      display: none;
+      width: 100%;
+      height: 60px;
+      background-color: #2c3e50;
+      position: relative;
+      float: left;
+      .menu-line {
+        float: left;
+        height:auto;
+        width:auto;
+        padding-top: 15px;
+        margin: 0 20px;
+        span {
+          height: 2px;
+          width: 20px;
+          margin: 3px;
+          float: left;
+          background-color: #fff;
+          clear: both;
+        }
+      }
+      .menu-btn {
+        color: #fff;
+        display: block;
+        padding-top: 20px;
+        width: 100%;
+        height: 40%;
+      }
+      .menu-mob {
+        background-color: #fff;
+        display: none;
+        position: relative;
+        float: left;
+        width: 100%;
+        padding-left: 0;
+        overflow: hidden;
+        li {
+          display: block;
+          position: relative;
+          list-style: none;
+          width: 100%;
+          clear: both;
+          float: left;
+          padding-top: 10px;
+          box-sizing: border-box;
+          &:hover {
+            background-color: #e4e4e4;
+          }
+          &:hover .arrow-menu{
+            transform: rotate(90deg);
+            padding-left: 15px;
+            transition: .5s;
+          }
+          img {
+            display: block;
+            position: relative;
+            float: left;
+            padding-top: 15px;
+          }
+          .gyro {
+            padding-left: 15px;
+          }
+          a {
+            display: block;
+            float: left;
+            color: #6d6d6d;
+            padding: 10px 15px;
+            width: 70%;
+            @include breakpoint(max-width 430px) {
+              width: 55%;
+            }
+          }
+          .arrow-menu {
+            float: right;
+            transition: .5s;
+          }
+          ul {
+            display: none;
+            padding-left: 0;
+            margin: 0;
+            float: left;
+            width: 100%;
+            li {
+              background-color: #fff;
+              width: 100%;
             }
           }
         }

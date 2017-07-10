@@ -7,3 +7,9 @@
   width:auto;
   font-size: 12px;
 }
+.clearfix {
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  width: 100%;
+}
