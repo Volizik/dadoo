@@ -1,0 +1,35 @@
+.shipping-order{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  background: #fff;
+  &__title{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    h1{
+      color: #2c3e50;
+      font-size: 25px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom:0;
+    }
+  }
+  &__text{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+    p{
+      color: #adadad;
+      font-size: 15px;
+      font-weight: 400;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
