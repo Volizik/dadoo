@@ -16,6 +16,44 @@ $(document).ready(function () {
         }
     });
 
+    //for mobile-menu
+
+    $(document).on('click', '.menu-btn', function() {
+        var submenu = $(this).parent().find('.menu-mob');
+        if ($(this).parent().find('.menu-mob').length > 0) {
+            event.preventDefault();
+            if ($(this).hasClass('sub-menu-show')) {
+                $(this).removeClass('sub-menu-show');
+                submenu.hide();
+            } else {
+                $('.menu-btn').removeClass('sub-menu-show');
+                $('.menu-mob').hide();
+                $(this).addClass('sub-menu-show');
+                submenu.show();
+            }
+        }
+    });
+
+    //for mobile sub-menu
+
+    $(document).on('click', '.menu-mob__list a', function() {
+        var submenu = $(this).parent().find('.menu-mob__list-submenu');
+        if ($(this).parent().find('.menu-mob__list-submenu').length > 0) {
+            event.preventDefault();
+            console.log (submenu);
+            if ($(this).hasClass('sub-menu-show')) {
+                $(this).removeClass('sub-menu-show');
+                submenu.hide();
+            } else {
+                $('.menu-mob__list a').removeClass('sub-menu-show');
+                $('.menu-mob__list-submenu').hide();
+                $(this).addClass('sub-menu-show');
+                submenu.show();
+            }
+        }
+    });
+
+
     //for home reviews
     $('.owl-carousel').owlCarousel({
         loop:true,
