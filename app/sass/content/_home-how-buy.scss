@@ -1,6 +1,9 @@
 .how-buy {
   background-color: #f3f3f3;
   &__text {
+    @include breakpoint(max-width 880px) {
+      width: 100%;
+    }
     position: relative;
     width: 30%;
     float: left;
@@ -48,8 +51,15 @@
     }
   }
   &__img {
+    @include breakpoint(max-width 880px) {
+      display: none;
+    }
     position: relative;
     float: left;
     transform: translate(20%, 25%);
+    width: 70%;
+    img {
+      max-width: 100%;
+    }
   }
 }

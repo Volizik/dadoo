@@ -59,7 +59,7 @@ $(document).ready(function () {
         loop:true,
         margin:10,
         dots: true,
-        autoplay:true,
+        autoplay:false,
         autoplayTimeout:5000,
         autoplayHoverPause:true,
         responsive:{

@@ -4,15 +4,29 @@
   position: relative;
   float: left;
   width: 100%;
+  @include breakpoint(max-width 700px) {
+    padding-top: 20px;
+  }
   &__top {
     @include display-flex(flex);
     @include justify-content(space-between);
     @include align-items(center);
     color: #fff;
+    @include breakpoint(max-width 700px) {
+      @include flex-direction(column);
+    }
     &__payment {
+      @include breakpoint(max-width 700px) {
+        @include order(10);
+        margin-top: 150px;
+        @include flex-direction(column);
+      }
       @include display-flex(flex);
       @include align-items(center);
       p {
+        @include breakpoint(max-width 700px) {
+          width: 150px;
+        }
         font-size: 15px;
         display: block;
         width: 90px;
@@ -24,7 +38,17 @@
       }
     }
     &__contacts {
+      @include breakpoint(max-width 700px) {
+        @include display-flex(flex);
+        a {
+          height: 20px;
+          margin-left: 10px;
+        }
+      }
       p {
+        @include breakpoint(max-width 700px) {
+          font-size: 15px;
+        }
         font-size: 20px;
         margin: 0;
       }
@@ -38,6 +62,31 @@
     @include justify-content(space-between);
     width: 820px;
     margin: 10px auto;
+    @include breakpoint(max-width 992px) {
+      .for-middle {
+        display: none;
+      }
+      width: 500px
+    }
+    @include breakpoint(max-width 700px) {
+      position: absolute;
+      top: 100px;
+      left: 10%;
+    }
+    @include breakpoint(max-width 600px) {
+      left: 5%;
+    }
+    @include breakpoint(max-width 540px) {
+      left: 15%;
+      .for-mobile {
+        display: none;
+      }
+      @include justify-content(space-around);
+      width: 280px;
+    }
+    @include breakpoint(max-width 400px) {
+      left: 5%;
+    }
     .block {
       width: 164px;
       color: #fff;
@@ -47,5 +96,63 @@
         font-size: 12px;
       }
     }
+  }
+  .footer-paragraph {
+    @include breakpoint(min-width 992px) {
+      display: none;
+    }
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    color: #fff;
+    padding-top: 10px;
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.modal {
+  width: 100%;
+  position: absolute;
+  background-color: #e4e4e4;
+  color: #2c3e50;
+  font-size:15px;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px;
+  span {
+    color: #3c9dd0;
+  }
+  .basket {
+    @include breakpoint(max-width 450px) {
+      float: left;
+    }
+    display: inline-block;
+    position: relative;
+    padding-right: 20px;
+    vertical-align: middle;
+  }
+  p {
+    @include breakpoint(max-width 450px) {
+      float: left;
+      text-align: left;
+      width: 70%;
+      margin: 0;
+      margin-bottom: 5px;
+    }
+    display: inline-block;
+    padding-right: 20px;
+  }
+  a {
+    @include breakpoint(max-width 450px) {
+      position: relative;
+      float: left;
+      left: 50%;
+      transform: translate(-50%);
+      margin-top: 20px;
+    }
+    text-transform: uppercase;
+    margin-button: 10px;
   }
 }
