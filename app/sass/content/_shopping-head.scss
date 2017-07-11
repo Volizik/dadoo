@@ -1,0 +1,115 @@
+.shopping-head {
+  background-color: #d4dfe1;
+  margin-top: 20px;
+  @include breakpoint(max-width 725px) {
+    margin-top: 70px;
+  }
+  &__wrap {
+    position: relative;
+    float: left;
+    margin-top: 20px;
+    width: 100%;
+    &__text {
+      position: relative;
+      float: left;
+      width: 320px;
+      padding-bottom: 50px;
+      z-index: 5;
+      @include breakpoint(max-width 712px) {
+        margin-bottom: 30px;
+        width: 50%;
+      }
+      @include breakpoint(max-width 520px) {
+        width: 40%;
+      }
+
+      h1 {
+        font-size: 35px;
+        font-weight: 700;
+        padding-top: 30px;
+        color: #2c3e50;
+        margin-bottom: 10px;
+        @include breakpoint(max-width 712px) {
+          font-size: 15px;
+        }
+        @include breakpoint(max-width 520px) {
+          padding-top: 0;
+        }
+      }
+      h2.sale {
+        font-size: 25px;
+        font-weight: 700;
+        color: #2c3e50;
+        @include breakpoint(max-width 712px) {
+          font-size: 15px;
+          margin-bottom: 30px;
+
+        }
+        span {
+          color: #3c9dd0;
+        }
+      }
+      a {
+        @include breakpoint(max-width 712px) {
+           right: -50px;
+           position: absolute;
+           margin-top: 20px;
+         }
+      }
+      p {
+        @include breakpoint(max-width 712px) {
+          font-size: 9px;
+        }
+        font-size: 15px;
+        color: #979dab;
+        margin-top: 0;
+      }
+    }
+    &__img {
+      position: relative;
+      float: right;
+      @include breakpoint(max-width 712px) {
+        width: 50%;
+      }
+      @include breakpoint(max-width 520px) {
+        width: 60%;
+      }
+      img {
+        position: absolute;
+        top: -150px;
+        right: 80px;
+        height: 530px;
+        @include breakpoint(max-width 992px) {
+           height: 450px;
+           top: -70px;
+           right: -40px;
+         }
+        @include breakpoint(max-width 712px) {
+          height:320px;
+          right: 0;
+          top: -82px;
+          max-width: 100%;
+        }
+        @include breakpoint(max-width 570px) {
+          top: -70px;
+        }
+        @include breakpoint(max-width 520px) {
+          top: -80px;
+        }
+        @include breakpoint(max-width 470px) {
+          top: -65px;
+        }
+        @include breakpoint(max-width 469px) {
+          top: -45px;
+        }
+        @include breakpoint(max-width 390px) {
+          right: -60px;
+          max-width: 300px;
+        }
+        @include breakpoint(max-width 389px) {
+          top: -33px;
+        }
+      }
+    }
+  }
+}

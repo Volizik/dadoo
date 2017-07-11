@@ -85,4 +85,16 @@ $(document).ready(function () {
         function () {});
     /*close single afisha countdown*/
 
+
+
+    //for shopping-order-text
+
+    $(document).on('click', '.btn-for-middle', function () {//кликаем по кнопке
+        event.preventDefault();//отмена действия ссылки по умолчанию
+        var text = $(this).parent().prev().find('p');//находим элемент в DOM
+        text.addClass('full-text');//добавляем найденому элементу класс
+        $(this).hide();//скрываем кнопку
+    })
+
+
 });
