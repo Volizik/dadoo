@@ -155,7 +155,7 @@
     }
   }
   &__bottom {
-    @include breakpoint(max-width 712px) {
+    @include breakpoint(max-width 725px) {
       width: 100%;
     }
     margin-top: 20px;
@@ -163,7 +163,7 @@
     float: left;
     z-index: 20;
     &__nav {
-      @include breakpoint(max-width 712px) {
+      @include breakpoint(max-width 725px) {
         display: none;
       }
       ul {
@@ -314,7 +314,7 @@
       }
     }
     &__nav-mobile {
-      @include breakpoint(max-width 712px) {
+      @include breakpoint(max-width 725px) {
         display: block;
       }
       display: none;
