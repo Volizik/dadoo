@@ -26,6 +26,9 @@
       position: relative;
       float: left;
       width: 396px;
+      @include breakpoint(max-width 700px) {
+        width: 100%;
+      }
       h2{
         color: #ffa438;
         font-size: 20px;
@@ -43,6 +46,12 @@
       position: relative;
       float: left;
       width: calc(100% - 396px);
+      @include breakpoint(max-width 992px) {
+        margin-top: 40px;
+      }
+      @include breakpoint(max-width 700px) {
+        display: none;
+      }
       img{
         width: 100%;
         object-fit: cover;
