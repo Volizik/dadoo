@@ -96,5 +96,13 @@ $(document).ready(function () {
         $(this).hide();//скрываем кнопку
     })
 
+    //slides for card-products
+
+    $(window).load(function() {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            controlNav: "thumbnails"
+        });
+    });
 
 });
