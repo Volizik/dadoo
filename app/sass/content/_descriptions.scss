@@ -1,0 +1,13 @@
+.descriptions {
+  background-color: #fafafa;
+  padding-top: 20px;
+  &__wrap {
+    background-color: #ffffff;
+    border: 1px solid #e4e4e4;
+    padding: 4%;
+    box-sizing: border-box;
+    p {
+      color: #2c3e50;
+    }
+  }
+}
