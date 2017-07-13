@@ -89,19 +89,21 @@ $(document).ready(function () {
 
     //for shopping-order-text
 
-    $(document).on('click', '.btn-for-middle', function () {//кликаем по кнопке
+    $(document).on('click', '.descriptions__wrap a', function () {//кликаем по кнопке
         event.preventDefault();//отмена действия ссылки по умолчанию
-        var text = $(this).parent().prev().find('p');//находим элемент в DOM
+        var text = $(this).parent().find('p');//находим элемент в DOM
         text.addClass('full-text');//добавляем найденому элементу класс
         $(this).hide();//скрываем кнопку
-    })
+    });
 
     //slides for card-products
 
     $(window).load(function() {
         $('.flexslider').flexslider({
             animation: "slide",
-            controlNav: "thumbnails"
+            controlNav: "thumbnails",
+            autoplay: "true",
+            slideshowSpeed: 2000
         });
     });
 
@@ -121,6 +123,25 @@ $(document).ready(function () {
         $input.val(parseInt($input.val()) + 1);
         $input.change();
         return false;
+    });
+
+    //for card-product
+
+    $(document).on('click', '.btn-for-middle', function () {//кликаем по кнопке
+        event.preventDefault();//отмена действия ссылки по умолчанию
+        var text = $(this).parent().prev().find('p');//находим элемент в DOM
+        text.addClass('full-text');//добавляем найденому элементу класс
+        $(this).hide();//скрываем кнопку
+    });
+
+    //for modal
+
+    $(document).on('click', '.in-basket', function () {
+        event.preventDefault();
+        $('.modal').css('display', 'block');
+        setTimeout(function () {
+            $('.modal').css('display', 'none');
+        }, 3000);
     });
 
 

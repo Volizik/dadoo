@@ -8,8 +8,15 @@
     background: #ffffff;
     box-sizing: border-box;
     padding: 4%;
+    @include breakpoint(max-width 725px) {
+      margin: 20px;
+      width:calc(100% - 40px);
+    }
     h2 {
       margin-left: 10px;
+      @include breakpoint(max-width 992px) {
+        font-size: 20px;
+      }
     }
     ul {
       width: 45%;
@@ -17,6 +24,10 @@
       padding-left: 0;
       box-sizing: border-box;
       padding: 10px;
+      @include breakpoint(max-width 650px) {
+        width: 100%;
+        margin: 0;
+      }
       li {
         list-style:none;
         float: left;
@@ -28,6 +39,9 @@
           color: #2c3e50;
           font-size: 17px;
           margin: 10px;
+          @include breakpoint(max-width 992px) {
+            font-size: 13px;
+          }
         }
         p:first-of-type {
           float: left;
@@ -39,6 +53,10 @@
     }
     &__left {
       float: left;
+      @include breakpoint(max-width 450px) {
+        width: 100%;
+        object-fit: none;
+      }
     }
     &__right {
       float: right;

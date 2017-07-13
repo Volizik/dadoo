@@ -78,6 +78,10 @@
     margin-bottom: 10px;
     margin-left: 20px;
     margin-top: 0;
+    @include breakpoint(max-width 725px) {
+      width: 100%;
+      margin-top: 10px;
+    }
     li {
       display: block;
       position: relative;
@@ -97,18 +101,43 @@
     border-radius: 10px;
     box-sizing: border-box;
     background-color: #ffffff;
+    @include breakpoint(max-width 725px) {
+      width: calc(100% - 40px);
+      margin: 20px;
+      margin-top: 0;
+      padding: 20px;
+    }
+    @include breakpoint(max-width 360px) {
+      padding: 0px;
+    }
     .flexslider {
       border: none;
       margin-bottom: 0;
       box-sizing: border-box;
       padding: 10px;
+      position: relative;
       .flex-viewport {
         padding: 30px 0;
         margin: 0 30px;
         box-sizing: border-box;
+        @include breakpoint(max-width 725px) {
+          padding: 100px 0;
+          margin: 0 100px;
+        }
+        @include breakpoint(max-width 580px) {
+          padding: 50px 0;
+          margin: 0 50px;
+        }
+        @include breakpoint(max-width 400px) {
+          padding: 20px 0;
+          margin: 0 20px;
+        }
       }
       .flex-control-thumbs {
         margin-top: 70px;
+        @include breakpoint(max-width 725px) {
+          display: none;
+        }
       }
       .flex-control-thumbs li{
         width: 33%;
@@ -119,6 +148,22 @@
         position: absolute;
         top: 270px;
         right: 20px;
+        @include breakpoint(max-width 992px) {
+          top: 200px;
+          right: 0;
+          height: 25px;
+        }
+        @include breakpoint(max-width 725px) {
+          position: relative;
+          margin: 0  auto;
+          top: -50px;
+        }
+        @include breakpoint(max-width 580px) {
+          top: -30px;
+        }
+        @include breakpoint(max-width 400px) {
+          top: 0;
+        }
       }
       .flex-prev {
         background: url(../img/icons/flex-prev-left.png) center center no-repeat;
@@ -151,6 +196,9 @@
       width: 50%;
       position: relative;
       float: left;
+      @include breakpoint(max-width 725px) {
+        width: 100%;
+      }
       .slides {
         img {
           max-width: 100%;
@@ -163,14 +211,31 @@
       position: relative;
       float: left;
       box-sizing: border-box;
+      @include breakpoint(max-width 725px) {
+        width: 100%;
+      }
       h2 {
         font-size:25px;
         font-weight: 700;
         margin-top: 0;
+        @include breakpoint(max-width 992px) {
+          font-size: 17px;
+          margin-bottom: 0;
+        }
+        @include breakpoint(max-width 725px) {
+          font-size: 20px;
+        }
       }
       p {
         font-size: 12px;
         color: #cccccc;
+        @include breakpoint(max-width 992px) {
+          font-size: 8px;
+          margin-top: 0;
+        }
+        @include breakpoint(max-width 725px) {
+          font-size: 10px;
+        }
         span {
           position: relative;
           float: left;
@@ -178,9 +243,13 @@
           display: block;
           margin-top: 10px;
           color: #2c3e50;
+          @include breakpoint(max-width 992px) {
+            margin-top: -5px;
+          }
         }
       }
       .characteristics {
+        background: #fff;
         margin-bottom: 5px;
         width: 100%;
         position: relative;
@@ -194,18 +263,29 @@
           float: left;
           width: 27%;
           text-align: center;
+          @include breakpoint(max-width 725px) {
+            width: 32%;
+          }
           &:first-child {
             margin-left: 0;
           }
           img {
             margin-top: 10px;
             height: 20px;
+            @include breakpoint(max-width 992px) {
+              height: 15px;
+            }
           }
           p {
+            color: #2c3e50;
             margin-top: 0;
             font-size: 10px;
             margin-bottom: 0;
             line-height: 15px;
+            @include breakpoint(max-width 992px) {
+              font-size: 8px;
+              line-height:10px;
+            }
           }
         }
       }
@@ -217,6 +297,9 @@
         position: relative;
         float: left;
         clear: both;
+        @include breakpoint(max-width 992px) {
+          margin-bottom: 3px;
+        }
       }
       h3 {
         position: relative;
@@ -226,6 +309,12 @@
         font-weight: 700;
         width: 100%;
         margin: 5px 0;
+        @include breakpoint(max-width 992px) {
+          font-size: 13px;
+        }
+        @include breakpoint(max-width 725px) {
+          font-size: 16px;
+        }
       }
       .counter {
         width: 93px;
@@ -235,6 +324,11 @@
         float: left;
         margin-right: 30px;
         text-align: center;
+        @include breakpoint(max-width 992px) {
+          height: 28px;
+          width: 62px;
+          margin-right: 20px;
+        }
         .minus {
           display: inline-block;
           position: relative;
@@ -244,6 +338,10 @@
           padding: 10px;
           margin-left: 3px;
           color: #2c3e50;
+          @include breakpoint(max-width 992px) {
+            height: 22px;
+            padding: 5px;
+          }
         }
         .cipher {
           display: inline-block;
@@ -256,6 +354,10 @@
           margin-top: 3px;
           color: #2c3e50;
           text-align: center;
+          @include breakpoint(max-width 992px) {
+            height: 17px;
+            width: 20px;
+          }
         }
         .plus {
           display: inline-block;
@@ -265,18 +367,32 @@
           right: 0;
           width: 10%;
           color: #2c3e50;
+          @include breakpoint(max-width 992px) {
+            height: 22px;
+            padding: 5px;
+          }
         }
       }
       a.btn-orange {
         position: relative;
         float: left;
         clear: right;
+        @include breakpoint(max-width 992px) {
+          padding: 5px 20px;
+        }
       }
       ul {
         position: relative;
         float: left;
         height: 30px;
         padding-left: 0;
+        clear: both;
+        @include breakpoint(max-width 992px) {
+          font-size: 8px;
+        }
+        @include breakpoint(max-width 725px) {
+          font-size: 10px;
+        }
         li {
           width: 50%;
           position: relative;
@@ -295,14 +411,36 @@
         background-color: #eeeeee;
         padding: 0px 20px;
         box-sizing: border-box;
+        @include breakpoint(max-width 992px) {
+          padding: 0px 10px;
+        }
+        @include breakpoint(max-width 725px) {
+          text-align: center;
+        }
+        @include breakpoint(max-width 360px) {
+          padding: 0;
+        }
         p {
           display: inline-block;
           color: #2c3e50;
           width: 60px;
           margin: 5px 0;
+          @include breakpoint(max-width 992px) {
+            font-size: 8px;
+            width: 40px;
+          }
+          @include breakpoint(max-width 725px) {
+            font-size: 10px;
+            width: 60px;
+          }
+
         }
         img {
           padding-left: 10px;
+          @include breakpoint(max-width 992px) {
+            height: 23px;
+            padding-left: 0;
+          }
         }
       }
       .delivery {
@@ -312,6 +450,9 @@
           position: relative;
           float: left;
           margin-top: 15px;
+          @include breakpoint(max-width 992px) {
+            margin-top: 7px;
+          }
         }
         p {
           position: relative;
@@ -320,6 +461,43 @@
           color: #2c3e50;
           margin: 5px 0;
           margin-left: 10px;
+        }
+      }
+    }
+  }
+  .for-card-prod {
+    position: relative;
+    float: left;
+    width:100%;
+    clear: none;
+    @include  breakpoint(max-width 992px) {
+      width:calc(100% - 220px);
+      margin-left: 20px;
+    }
+    @include breakpoint(max-width 725px) {
+      width: calc(100% - 40px);
+    }
+    ul {
+      li {
+        padding: 10px;
+        align-self: center;
+        @include breakpoint(max-width 480px) {
+          text-align: center;
+          height: 130px;
+          padding-top: 30px;
+        }
+        img {
+          height: 35px;
+          @include breakpoint(max-width 480px) {
+            width: 100%;
+            object-fit: none;
+          }
+        }
+        p {
+          margin-bottom: 0;
+          @include breakpoint(max-width 480px) {
+            width: 100%;
+          }
         }
       }
     }

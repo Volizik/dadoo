@@ -6,8 +6,33 @@
     border: 1px solid #e4e4e4;
     padding: 4%;
     box-sizing: border-box;
+    @include breakpoint(max-width 725px) {
+      margin: 0 20px;
+    }
     p {
       color: #2c3e50;
+      @include breakpoint(max-width 600px) {
+        height:calc(12px * 1 * 10);
+        display: -webkit-box;
+        -webkit-line-clamp: 10;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+      }
     }
+  }
+  .btn-for-middle {
+    display: none;
+    text-align: center;
+    color: #2c3e50;
+    @include breakpoint(max-width 600px) {
+      display: block;
+    }
+
+  }
+  p.full-text {
+    height: 100%;
+    display: block;
   }
 }
